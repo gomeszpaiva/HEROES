@@ -1,0 +1,34 @@
+<!-- <h2>{{hero.name | uppercase}} Details</h2>
+<div><span>Id: </span>{{hero.id}}</div>
+<div><span>Name: </span>{{hero.name}}</div> -->
+
+<!-- <div>
+    <label for="name"> Hero</label>
+    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+</div>
+
+{{hero.name}} -->
+
+
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <button [class.selected]="hero === selectedHero" (click)="onSelect(hero)" type="button">
+            <span class="badge">{{hero.id}}</span>
+            <span class="name">{{hero.name}}</span>
+        </button>
+    </li>
+</ul>
+
+<!-- <div *ngIf="selectedHero">
+    <h2> {{selectedHero.name}} </h2>
+    <div>id: {{selectedHero.id}}</div>
+    <div>
+        <label for="hero-name">Hero name:</label>
+        <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+    </div>
+</div> -->
+
+<!-- variavel que esta dentro da outra pasta esta senfo importada -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
